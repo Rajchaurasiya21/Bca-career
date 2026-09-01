@@ -1,7 +1,4 @@
-// =========================
-// GET ELEMENTS
-// =========================
-
+// Get elements
 const slides = document.querySelectorAll(".slide");
 
 const dots = document.querySelectorAll(".dot");
@@ -15,19 +12,9 @@ const currentSlide =
 
 const startBtn =
     document.querySelector("#start-btn");
-
-
-// =========================
-// CURRENT SLIDE
-// =========================
-
+// current slide
 let currentIndex = 0;
-
-
-// =========================
-// SHOW SLIDE
-// =========================
-
+// show slide
 function showSlide(index) {
 
     // Remove active from all slides
@@ -78,10 +65,7 @@ function showSlide(index) {
         String(index + 1).padStart(2, "0");
 }
 
-
-// =========================
-// NEXT
-// =========================
+// NEXT slide
 
 function nextSlide() {
 
@@ -95,9 +79,9 @@ function nextSlide() {
 }
 
 
-// =========================
+
 // PREVIOUS
-// =========================
+
 
 function previousSlide() {
 
@@ -110,10 +94,7 @@ function previousSlide() {
     showSlide(currentIndex);
 }
 
-
-// =========================
 // BUTTON EVENTS
-// =========================
 
 nextBtn.addEventListener(
     "click",
@@ -126,10 +107,7 @@ prevBtn.addEventListener(
     previousSlide
 );
 
-
-// =========================
 // DOT EVENTS
-// =========================
 
 dots.forEach((dot, index) => {
 
@@ -144,10 +122,6 @@ dots.forEach((dot, index) => {
 });
 
 
-// =========================
-// START BUTTON
-// =========================
-
 startBtn.addEventListener("click", () => {
 
     currentIndex = 1;
@@ -156,10 +130,6 @@ startBtn.addEventListener("click", () => {
 
 });
 
-
-// =========================
-// KEYBOARD
-// =========================
 
 document.addEventListener(
     "keydown",
@@ -175,10 +145,3 @@ document.addEventListener(
 
     }
 );
-
-
-// =========================
-// INITIALIZE
-// =========================
-
-showSlide(0);
