@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BCA — Now What? 💀</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* slide 
+           SLIDE SYSTEM
+        */
+        .slide {
+            position: absolute;
+            inset: 0;
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            transform: translateX(50px);
+
+            transition:
+                opacity 0.5s ease,
+                transform 0.5s ease,
+                visibility 0.5s ease;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+
+            transform: translateX(0);
+        }
+
+        /* Meme floating animation */
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(3deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(3deg);
+            }
+        }
+
+        .meme-box {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Roadmap animation */
+
+        @keyframes pulseStep {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .roadmap-step:hover {
+            animation: pulseStep 0.8s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+
+<body class="bg-[#0b0b0f] text-white overflow-hidden">
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav
+        class="fixed top-0 left-0 w-full h-20 px-[7%]
+               flex items-center justify-between z-50">
+
+        <!-- Logo -->
+
+        <div class="text-2xl font-black tracking-tight">
+            BCA<span class="text-purple-500">?</span>
+        </div>
+
+
+        <!-- Counter -->
+
+        <div class="text-sm text-zinc-500">
+            <span
+                id="current-slide"
+                class="text-white font-bold">
+                01
+            </span>
+
+            <span> / 05</span>
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= PRESENTATION ================= -->
+
+    <main class="relative w-full h-screen">
+
+
+        <!-- ================= SLIDE 1 ================= -->
+
+        <section
+            class="slide active px-[7%] pt-24 pb-24
+                   flex items-center justify-between"
+            id="slide-1">
+
+            <div class="max-w-3xl">
+
+                <p
+                    class="mb-5 text-xs font-bold
+                           tracking-[4px] text-purple-500">
+
+                    BCA SURVIVAL GUIDE
+
+                </p>
+
+
+                <h1
+                    class="text-6xl md:text-8xl lg:text-[105px]
+                           font-black leading-[0.88]
+                           tracking-[-5px]">
+
+                    BCA...
+
+                    <span class="block text-purple-400">
+                        Now What?  💀
+                    </span>
+
+                </h1>
+
+
+                <p
+                    class="mt-8 max-w-xl
+                           text-lg md:text-xl
+                           text-zinc-400
+                           leading-relaxed">
+
+                     Don't panic just chill ,You survived BCA, Assignments, and exams syallbus Obv.
+                    <br>
+        
+                     Now let's figure out what to do with it?
+                     <br>  do you think you can? " kar pata toh yaha ni hota <br>  joking chill" have sheet and listen to me
+
+                </p>
+
+
+                <button
+                    id="start-btn"
+                    class="mt-8 px-7 py-4
+                           bg-white text-black
+                           rounded-xl
+                           font-bold
+                           hover:-translate-y-1
+                           hover:shadow-2xl
+                           transition-all duration-200">
+
+                    Let's Figure It Out →
+
+                </button>
+
+            </div>
+
+
+            <!-- Meme -->
+
+            <div
+                class="meme-box hidden md:block
+                       w-72 p-7
+                       bg-[#15151b]
+                       border border-zinc-800
+                       rounded-2xl
+                       text-center">
+
+                <p class="text-sm text-zinc-500">
+                    Me after completing BCA:
+                </p>
+
+
+                <div
+                    class="my-6 text-9xl">
+
+                    🤨
+
+                </div>
+
+
+                <p class="text-zinc-300 font-medium">
+                    "Ab kya karu?"<br> eat 5 star do what? yes
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SLIDE 2 ================= -->
+
+        <section
+            class="slide px-[7%] pt-24 pb-24
+                   flex items-center"
+            id="slide-2">
+
+            <div class="max-w-5xl">
+
+                <p
+                    class="mb-5 text-xs font-bold
+                           tracking-[4px] text-purple-500">
+
+                    01 — OPTIONS
+
+                </p>
+
+
+                <h2
+                    class="text-5xl md:text-7xl
+                           font-black leading-[0.9]
+                           tracking-[-3px]">
+
+                    Bro, you actually
+
+                    <span class="block text-purple-400">
+                        have options.
+                    </span>
+
+                </h2>
+
+
+                <p class="mt-6 text-lg text-zinc-500">
+                    BCA doesn't mean you have only one career path.
+                </p>
+
+
+                <!-- Career Cards -->
+
+                <div
+                    class="mt-8 grid grid-cols-2
+                           md:grid-cols-3 gap-4">
+
+                    <button
+                        class="career-card
+                               p-6 md:p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               text-3xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               hover:bg-purple-950/20
+                               transition-all duration-200">
+
+                        💻
+
+                        <span
+                            class="block mt-3
+                                   text-sm font-bold">
+
+                            SDE
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="career-card
+                               p-6 md:p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               text-3xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               hover:bg-purple-950/20
+                               transition-all duration-200">
+
+                        🤖
+
+                        <span
+                            class="block mt-3
+                                   text-sm font-bold">
+
+                            AI / ML
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="career-card
+                               p-6 md:p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               text-3xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               hover:bg-purple-950/20
+                               transition-all duration-200">
+
+                        📊
+
+                        <span
+                            class="block mt-3
+                                   text-sm font-bold">
+
+                            Data
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="career-card
+                               p-6 md:p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               text-3xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               hover:bg-purple-950/20
+                               transition-all duration-200">
+
+                        ☁️
+
+                        <span
+                            class="block mt-3
+                                   text-sm font-bold">
+
+                            Cloud
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="career-card
+                               p-6 md:p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               text-3xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               hover:bg-purple-950/20
+                               transition-all duration-200">
+
+                        🔐
+
+                        <span
+                            class="block mt-3
+                                   text-sm font-bold">
+
+                            Cybersecurity
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="career-card
+                               p-6 md:p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               text-3xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               hover:bg-purple-950/20
+                               transition-all duration-200">
+
+                        🎓
+
+                        <span
+                            class="block mt-3
+                                   text-sm font-bold">
+
+                            Higher Studies
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SLIDE 3 ================= -->
+
+        <section
+            class="slide px-[7%] pt-24 pb-24
+                   flex items-center"
+            id="slide-3">
+
+            <div class="max-w-6xl">
+
+                <p
+                    class="mb-5 text-xs font-bold
+                           tracking-[4px] text-purple-500">
+
+                    02 — ROADMAP
+
+                </p>
+
+
+                <h2
+                    class="text-5xl md:text-7xl
+                           font-black leading-[0.9]
+                           tracking-[-3px]">
+
+                    Okay...
+
+                    <span class="block text-purple-400">
+                        HOW do I get there?
+                    </span>
+
+                </h2>
+
+
+                <p class="mt-6 text-lg text-zinc-500">
+                    Pick a direction. Start building.
+                </p>
+
+
+                <!-- Roadmap -->
+
+                <div
+                    class="mt-12 flex flex-wrap
+                           items-center gap-4">
+
+                    <div
+                        class="roadmap-step
+                               px-7 py-5
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               font-bold">
+
+                        <span
+                            class="block text-xs
+                                   text-purple-500 mb-2">
+
+                            01
+
+                        </span>
+
+                        BCA
+
+                    </div>
+
+
+                    <span
+                        class="text-2xl text-zinc-600">
+
+                        →
+
+                    </span>
+
+
+                    <div
+                        class="roadmap-step
+                               px-7 py-5
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               font-bold">
+
+                        <span
+                            class="block text-xs
+                                   text-purple-500 mb-2">
+
+                            02
+
+                        </span>
+
+                        Skills
+
+                    </div>
+
+
+                    <span
+                        class="text-2xl text-zinc-600">
+
+                        →
+
+                    </span>
+
+
+                    <div
+                        class="roadmap-step
+                               px-7 py-5
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               font-bold">
+
+                        <span
+                            class="block text-xs
+                                   text-purple-500 mb-2">
+
+                            03
+
+                        </span>
+
+                        Projects
+
+                    </div>
+
+
+                    <span
+                        class="text-2xl text-zinc-600">
+
+                        →
+
+                    </span>
+
+
+                    <div
+                        class="roadmap-step
+                               px-7 py-5
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               font-bold">
+
+                        <span
+                            class="block text-xs
+                                   text-purple-500 mb-2">
+
+                            04
+
+                        </span>
+
+                        Internship
+
+                    </div>
+
+
+                    <span
+                        class="text-2xl text-zinc-600">
+
+                        →
+
+                    </span>
+
+
+                    <div
+                        class="roadmap-step
+                               px-7 py-5
+                               bg-purple-600
+                               rounded-2xl
+                               font-bold">
+
+                        <span
+                            class="block text-xs
+                                   text-purple-200 mb-2">
+
+                            05
+
+                        </span>
+
+                        Job 🚀
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SLIDE 4 ================= -->
+
+        <section
+            class="slide px-[7%] pt-24 pb-24
+                   flex items-center"
+            id="slide-4">
+
+            <div class="max-w-5xl">
+
+                <p
+                    class="mb-5 text-xs font-bold
+                           tracking-[4px] text-purple-500">
+
+                    03 — OPPORTUNITIES
+
+                </p>
+
+
+                <h2
+                    class="text-5xl md:text-7xl
+                           font-black leading-[0.9]
+                           tracking-[-3px]">
+
+                    Your career doesn't
+
+                    <span class="block text-purple-400">
+                        end at campus.
+                    </span>
+
+                </h2>
+
+
+                <div
+                    class="mt-10 grid
+                           md:grid-cols-2 gap-5">
+
+
+                    <div
+                        class="p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               transition">
+
+                        <div class="text-4xl">
+                            💼
+                        </div>
+
+                        <h3 class="mt-4 text-xl font-bold">
+                            Jobs
+                        </h3>
+
+                        <p class="mt-2 text-zinc-500">
+                            Build skills and enter tech.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               transition">
+
+                        <div class="text-4xl">
+                            🎓
+                        </div>
+
+                        <h3 class="mt-4 text-xl font-bold">
+                            Higher Studies
+                        </h3>
+
+                        <p class="mt-2 text-zinc-500">
+                            MCA, MS, MBA and more.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               transition">
+
+                        <div class="text-4xl">
+                            📝
+                        </div>
+
+                        <h3 class="mt-4 text-xl font-bold">
+                            Entrance Exams
+                        </h3>
+
+                        <p class="mt-2 text-zinc-500">
+                            NIMCET, CUET-PG and others.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="p-7
+                               bg-[#15151b]
+                               border border-zinc-800
+                               rounded-2xl
+                               hover:-translate-y-2
+                               hover:border-purple-500
+                               transition">
+
+                        <div class="text-4xl">
+                            🌎
+                        </div>
+
+                        <h3 class="mt-4 text-xl font-bold">
+                            Global
+                        </h3>
+
+                        <p class="mt-2 text-zinc-500">
+                            International and remote opportunities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SLIDE 5 ================= -->
+
+        <section
+            class="slide px-[7%] pt-24 pb-24
+                   flex items-center"
+            id="slide-5">
+
+            <div class="max-w-5xl">
+
+                <p
+                    class="mb-5 text-xs font-bold
+                           tracking-[4px] text-purple-500">
+
+                    04 — YOUR MOVE
+
+                </p>
+
+
+                <h2
+                    class="text-5xl md:text-8xl
+                           font-black leading-[0.9]
+                           tracking-[-4px]">
+
+                    Stop overthinking.
+
+                    <span class="block text-purple-400">
+                        Start moving.
+                    </span>
+
+                </h2>
+
+
+                <p
+                    class="mt-7 text-lg md:text-xl
+                           text-zinc-500">
+
+                    Pick a direction.
+                    Learn. Build. Fail. Repeat.
+
+                </p>
+
+
+                <button
+                    class="mt-8 px-7 py-4
+                           bg-white text-black
+                           rounded-xl font-bold
+                           hover:-translate-y-1
+                           transition">
+
+                    Start Your Journey 🚀
+
+                </button>
+
+
+                <p class="mt-10 text-zinc-600">
+                    Future me is gonna thank me. 🗿
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ================= CONTROLS ================= -->
+
+    <div
+        class="fixed bottom-7 left-1/2
+               -translate-x-1/2
+               flex items-center gap-6 z-50">
+
+
+        <!-- Previous -->
+
+        <button
+            id="prev-btn"
+            class="w-11 h-11
+                   rounded-full
+                   border border-zinc-800
+                   bg-[#15151b]
+                   hover:bg-purple-600
+                   transition">
+
+            ←
+
+        </button>
+
+
+        <!-- Dots -->
+
+        <div class="flex gap-2">
+
+            <button
+                class="dot active w-7 h-2
+                       rounded-full bg-purple-500">
+            </button>
+
+            <button
+                class="dot w-2 h-2
+                       rounded-full bg-zinc-700">
+            </button>
+
+            <button
+                class="dot w-2 h-2
+                       rounded-full bg-zinc-700">
+            </button>
+
+            <button
+                class="dot w-2 h-2
+                       rounded-full bg-zinc-700">
+            </button>
+
+            <button
+                class="dot w-2 h-2
+                       rounded-full bg-zinc-700">
+            </button>
+
+        </div>
+
+
+        <!-- Next -->
+
+        <button
+            id="next-btn"
+            class="w-11 h-11
+                   rounded-full
+                   border border-zinc-800
+                   bg-[#15151b]
+                   hover:bg-purple-600
+                   transition">
+
+            →
+
+        </button>
+
+    </div>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="ppt.js"></script>
+
+</body>
+
+</html>
